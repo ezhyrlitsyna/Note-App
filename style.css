@@ -8,6 +8,7 @@ html {
 
 body {
   position: relative;
+  font-family: "Passions Conflict", cursive;
 }
 
 .note-container {
@@ -26,13 +27,14 @@ body {
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 0 10px;
+  font-family: "Kalam", cursive;
 }
 .note-title > div {
   align-self: center;
   text-align: center;
   justify-content: center;
   width: 120px;
-  font-size: 32px;
+  font-size: 28px;
   color: #2d2c2a;
 }
 
@@ -71,7 +73,7 @@ body {
 .note {
   display: flex;
   background-color: rgb(247, 185, 14);
-  font-size: 16px;
+  font-size: 28px;
   color: #121211;
   margin: 10px;
   border-radius: 10px;
@@ -128,7 +130,7 @@ body {
 
 .icon {
   position: absolute;
-  top: -10px;
+  top: 0px;
   left: 10px;
   display: block;
   width: 30px;
@@ -159,7 +161,8 @@ body {
 .statistic-category {
   display: flex;
   background-color: rgb(247, 185, 14);
-  font-size: 16px;
+  font-size: 28px;
+  font-weight: bold;
   color: #121211;
   margin: 10px;
   border-radius: 10px;
@@ -176,6 +179,8 @@ body {
 .category-title {
   display: flex;
   position: relative;
+  font-family: "Kalam", cursive;
+  height: 35px;
 }
 .category-title > p {
   padding-left: 50px;
@@ -199,6 +204,7 @@ body {
 }
 
 #createNote {
+  font-family: "Kalam", cursive;
   align-self: end;
   display: block;
   width: 100, 5px;
@@ -208,7 +214,7 @@ body {
   text-align: center;
   background-color: rgb(84, 82, 79);
   color: rgb(247, 185, 14);
-  font-size: 21px;
+  font-size: 20px;
   margin-top: 20px;
 }
 
@@ -222,13 +228,14 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Kalam", cursive;
 }
 
 #form {
   position: fixed;
   left: 35%;
   top: 20%;
-  width: 500px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   background: rgb(247, 185, 14);
@@ -237,7 +244,7 @@ body {
   padding: 24px;
 }
 #form > h2 {
-  font-size: 26px;
+  font-size: 28px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -245,8 +252,8 @@ body {
 #form > div {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 18px px;
+  line-height: 28px;
   margin-bottom: 10px;
 }
 #form > div > label {
@@ -262,18 +269,24 @@ body {
   border-radius: 4px;
   appearance: none;
   color: #cb9707;
+  font-family: "Kalam", cursive;
 }
 #form > div > input::placeholder {
   color: #cb9707;
+  font-family: "Kalam", cursive;
 }
 #form > div > textarea {
+  width: 400px;
+  font-family: "Kalam", cursive;
   background-color: transparent;
 }
 #form > div > textarea::placeholder {
   color: #2d2c2a;
+  font-family: "Kalam", cursive;
 }
 
 #form-submit {
+  font-family: "Kalam", cursive;
   min-width: 100px;
   align-self: center;
   color: rgb(247, 185, 14);
