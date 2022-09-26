@@ -130,7 +130,7 @@ body {
 
 .icon {
   position: absolute;
-  top: -10px;
+  top: 0px;
   left: 10px;
   display: block;
   width: 30px;
@@ -180,6 +180,7 @@ body {
   display: flex;
   position: relative;
   font-family: "Kalam", cursive;
+  height: 35px;
 }
 .category-title > p {
   padding-left: 50px;

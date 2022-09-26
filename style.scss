@@ -126,7 +126,7 @@ body{
 }
 .icon{
     position: absolute;
-    top: -10px;
+    top: 0px;
     left: 10px;
     display: block;
     width: 30px;
@@ -172,6 +172,7 @@ body{
     display: flex;
     position: relative;
     font-family: $fontFamilyTitle;
+    height: 35px;
     >p{
         padding-left: 50px;
         font-size: $fontSize - 10px;
