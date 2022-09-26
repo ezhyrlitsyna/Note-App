@@ -2,6 +2,8 @@ $fontSize: 16px;
 $mainSize: 100;
 $yellow: rgb(247, 185, 14);
 $grey: rgb(84, 82, 79);
+$fontFamilyMain: 'Passions Conflict', cursive;
+$fontFamilyTitle: 'Kalam', cursive;
 html{
     box-sizing: border-box;
 }
@@ -10,6 +12,7 @@ html{
 }
 body{
     position: relative;
+    font-family: $fontFamilyMain;
 }
 .note-container{
     
@@ -27,6 +30,7 @@ body{
     border-radius: 20px;
     margin-bottom: 20px;
     padding:0 10px;
+    font-family: $fontFamilyTitle;
     >div{
         align-self: center;
         text-align: center;
@@ -166,6 +170,7 @@ body{
 .category-title{
     display: flex;
     position: relative;
+    font-family: $fontFamilyTitle;
     >p{
         padding-left: 50px;
         font-size: $fontSize +2px;
@@ -184,6 +189,7 @@ body{
     background-image: url("./images/mycollection/004-quote.png");
 }
 #createNote{
+    font-family: $fontFamilyTitle;
     align-self: end;
     display: block;
     width: $mainSize*1,5 + px;
@@ -206,6 +212,7 @@ body{
     height: 100%;
     width: 100%;
     background-color: rgba($color: darken($grey, 90%), $alpha: 0.7);
+    font-family: $fontFamilyTitle;
 
 }
 #form{
@@ -245,20 +252,24 @@ body{
             border-radius: 4px;
             appearance: none;
             color: darken($yellow, 10%);
+            font-family: $fontFamilyTitle;
         }
         >input::placeholder{
             color: darken($yellow, 10%);
+            font-family: $fontFamilyTitle;
         }
         >textarea{
             background-color: transparent;
             &::placeholder{
                 color: darken($grey, 15%);
+                font-family: $fontFamilyTitle;
             }
         }
     }
 
 }
 #form-submit{
+    font-family: $fontFamilyTitle;
     min-width: 100px;
     align-self: center;
     color: $yellow;

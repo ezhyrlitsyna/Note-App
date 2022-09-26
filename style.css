@@ -8,6 +8,7 @@ html {
 
 body {
   position: relative;
+  font-family: "Passions Conflict", cursive;
 }
 
 .note-container {
@@ -26,6 +27,7 @@ body {
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 0 10px;
+  font-family: "Kalam", cursive;
 }
 .note-title > div {
   align-self: center;
@@ -176,6 +178,7 @@ body {
 .category-title {
   display: flex;
   position: relative;
+  font-family: "Kalam", cursive;
 }
 .category-title > p {
   padding-left: 50px;
@@ -199,6 +202,7 @@ body {
 }
 
 #createNote {
+  font-family: "Kalam", cursive;
   align-self: end;
   display: block;
   width: 100, 5px;
@@ -222,6 +226,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Kalam", cursive;
 }
 
 #form {
@@ -262,18 +267,22 @@ body {
   border-radius: 4px;
   appearance: none;
   color: #cb9707;
+  font-family: "Kalam", cursive;
 }
 #form > div > input::placeholder {
   color: #cb9707;
+  font-family: "Kalam", cursive;
 }
 #form > div > textarea {
   background-color: transparent;
 }
 #form > div > textarea::placeholder {
   color: #2d2c2a;
+  font-family: "Kalam", cursive;
 }
 
 #form-submit {
+  font-family: "Kalam", cursive;
   min-width: 100px;
   align-self: center;
   color: rgb(247, 185, 14);
