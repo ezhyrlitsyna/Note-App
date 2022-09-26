@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note app</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="note-container">
+        <div class="note-title">
+            <div>Name</div>
+            <div>Created</div>
+            <div>Category</div>
+            <div>Content</div>
+            <div>Dates</div>
+            <div class="buttonsIcon">
+                <button id="doneList"></button>
+                <button id="deleteList"></button>
+            </div>
+        </div>
+        <div class="note-list">
+        </div>
+            <button id="createNote">Create Note</button>
+        <div class="note-statistic">
+            <div class="note-title">
+                <div>Note Category</div>
+                <div>Active</div>
+                <div>Archived</div>
+            </div>
+            <div class="note-statistic-list">
+                <div class="statistic-category">
+                    <div class="category-title">
+                        <div class="icon task"></div>
+                        <p>Task</p>
+                    </div>
+                    <div class="task-active"></div>
+                    <div class="task-archived"></div>
+                </div>
+                <div class="statistic-category">
+                    <div class="category-title">
+                        <div class="icon thought"></div>
+                        <p>Random Thought</p>
+                    </div>
+                    <div class="thoughts-active"></div>
+                    <div class="thoughts-archived"></div>
+                </div>
+                <div class="statistic-category">
+                    <div class="category-title">
+                        <div class="icon idea"></div>
+                        <p>Idea</p>
+                    </div>
+                    <div class="idea-active"></div>
+                    <div class="idea-archived"></div>
+                </div>
+                <div class="statistic-category">
+                    <div class="category-title">
+                        <div class="icon quotes"></div>
+                        <p>Quotes</p>
+                    </div>
+                    <div class="quotes-active"></div>
+                    <div class="quotes-archived"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal">
+        <form action="#" id="form">
+            <button id="form-close">X</button>
+            <h2>add a new note</h2>
+        <div>
+            <label for="form-name">
+                Name:
+            </label>
+            <input type="text" name="name" id="form-name" placeholder="Enter name of notice" autofocus required>
+        </div>
+        <div>
+            <label for="form-category">
+                Choose your category:
+            </label>
+            <select name="category" id="form-category">
+                <option value="task" selected>Task</option>
+                <option value="thought">Random Thought</option>
+                <option value="idea">Idea</option>
+                <option value="quote">Quotes</option>
+            </select>
+        </div>
+        <div>
+            <textarea name="content" id="form-content" cols="40" rows="6" placeholder="Enter your notice" autofocus required></textarea>
+        </div>
+        <div>
+            <label for="form-date">Choose date of meeting: </label>
+            <input type="date" name="date" id="form-date">
+        </div>
+        <input type="submit" name="submit" id="form-submit" value="Create Note">
+    </form>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
