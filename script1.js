@@ -34,7 +34,10 @@ let arrayDoneIndex = [];
 let doneListView = false; 
 let oldNoteDate = "";
 
+
 createBtn.addEventListener("click", function(){
+    formTitle.textContent = "add a new note";
+    formSubmit.value = "Create Note";
     modal.style.display = "block";
 })
 formClose.addEventListener("click", function(){
@@ -140,7 +143,7 @@ function deleteNote(index, nameNote){
    
 }
 function editNote(noteIndex, noteName, noteCategory, noteContent, noteOldDate, noteDate){
-    createBtn.click();
+    modal.style.display = "block";
     formSubmit.value = "Save Changes";
     form.elements.name.value = noteName;
     noteCreatedDate = `${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}`;
