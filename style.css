@@ -1,0 +1,299 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+}
+
+.note-container {
+  margin: auto;
+  height: auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-title {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  background-color: rgb(247, 185, 14);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.note-title > div {
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  width: 120px;
+  font-size: 32px;
+  color: #2d2c2a;
+}
+
+.buttonsIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+#doneList {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: url("./images/mycollection/003-clipboard.png") no-repeat;
+  background-size: 30px 30px;
+}
+
+#deleteList {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: url("./images/mycollection/001-bin.png") no-repeat;
+  background-size: 30px 30px;
+}
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(84, 82, 79);
+  border-radius: 20px;
+}
+
+.note {
+  display: flex;
+  background-color: rgb(247, 185, 14);
+  font-size: 16px;
+  color: #121211;
+  margin: 10px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.note > div {
+  display: flex;
+  width: 130px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.note-name {
+  position: relative;
+  gap: 10px;
+}
+.note-name > p {
+  padding-left: 45px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.note-content > p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.note-buttons {
+  justify-content: right;
+  gap: 10px;
+}
+.note-buttons > button {
+  width: 30px;
+  height: 30px;
+  background: none;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+#editNote {
+  background-image: url("./images/mycollection/002-pencil.png");
+}
+
+#doneNote {
+  background-image: url("./images/mycollection/003-clipboard.png");
+}
+
+#deleteNote {
+  background-image: url("./images/mycollection/001-bin.png");
+}
+
+.icon {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+
+.note-statistic {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.note-statistic > .note-title {
+  justify-content: space-around;
+}
+.note-statistic > .note-title > div {
+  width: 300px;
+}
+
+.note-statistic-list {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(84, 82, 79);
+  border-radius: 20px;
+}
+
+.statistic-category {
+  display: flex;
+  background-color: rgb(247, 185, 14);
+  font-size: 16px;
+  color: #121211;
+  margin: 10px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.statistic-category > div {
+  width: 300px;
+  align-items: center;
+  text-align: center;
+}
+
+.category-title {
+  display: flex;
+  position: relative;
+}
+.category-title > p {
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+.task {
+  background-image: url("./images/mycollection/002-shopping-basket.png");
+}
+
+.thought {
+  background-image: url("./images/mycollection/003-power.png");
+}
+
+.idea {
+  background-image: url("./images/mycollection/001-light-bulb.png");
+}
+
+.quotes {
+  background-image: url("./images/mycollection/004-quote.png");
+}
+
+#createNote {
+  align-self: end;
+  display: block;
+  width: 100, 5px;
+  height: 50px;
+  border: 1px solid #fce4a2;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(84, 82, 79);
+  color: rgb(247, 185, 14);
+  font-size: 21px;
+  margin-top: 20px;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#form {
+  position: fixed;
+  left: 35%;
+  top: 20%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(247, 185, 14);
+  color: #2d2c2a;
+  border-radius: 8px;
+  padding: 24px;
+}
+#form > h2 {
+  font-size: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+#form > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+#form > div > label {
+  width: 180px;
+  text-align: right;
+}
+#form > div > input, #form > div select {
+  width: 200px;
+  height: 25px;
+  outline: none;
+  background: rgb(84, 82, 79);
+  border: 1px solid #372902;
+  border-radius: 4px;
+  appearance: none;
+  color: #cb9707;
+}
+#form > div > input::placeholder {
+  color: #cb9707;
+}
+#form > div > textarea {
+  background-color: transparent;
+}
+#form > div > textarea::placeholder {
+  color: #2d2c2a;
+}
+
+#form-submit {
+  min-width: 100px;
+  align-self: center;
+  color: rgb(247, 185, 14);
+  height: 40px;
+  border: none;
+  margin: 12px 0;
+  border-radius: 4px;
+  background-color: rgb(84, 82, 79);
+}
+
+#form-close {
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,281 @@
+$fontSize: 16px;
+$mainSize: 100;
+$yellow: rgb(247, 185, 14);
+$grey: rgb(84, 82, 79);
+html{
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+body{
+    position: relative;
+}
+.note-container{
+    
+    margin: auto;
+    height: auto;
+    width: $mainSize*10 + px;
+    display: flex;
+    flex-direction: column;
+}
+.note-title{
+    display: flex;
+    height: $mainSize+px;
+    justify-content: space-between;
+    background-color: $yellow;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding:0 10px;
+    >div{
+        align-self: center;
+        text-align: center;
+        justify-content: center;
+        width: 120px;
+        font-size: $fontSize+16px;
+        color: darken($grey,15% );
+    }
+}
+.buttonsIcon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+#doneList{
+    display: block;
+    width: 30px;
+    height:30px;
+    border: none;
+    background: url("./images/mycollection/003-clipboard.png") no-repeat;
+    background-size: 30px 30px;
+}
+#deleteList{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url("./images/mycollection/001-bin.png") no-repeat;
+    background-size: 30px 30px;
+}
+.note-list{
+    display: flex;
+    flex-direction: column;
+    background-color: $grey;
+    border-radius: 20px;
+}
+.note{
+    display: flex;
+    background-color: $yellow;
+    font-size: $fontSize;
+    color: darken($grey,25%);
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    >div{
+        display: flex;
+        width: 130px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    &-name{
+        position: relative;
+        gap: 10px;
+        >p{
+            padding-left: 45px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    &-content{
+        >p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+    }
+    &-buttons{
+        justify-content: right;
+        gap: 10px;
+        >button{
+            width: 30px;
+            height: 30px;
+            background:none;
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            border: none;
+        }
+    }    
+}
+#editNote{
+    background-image: url("./images/mycollection/002-pencil.png");
+}
+#doneNote{
+    background-image: url("./images/mycollection/003-clipboard.png");
+}
+#deleteNote{
+    background-image: url("./images/mycollection/001-bin.png");
+}
+.icon{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+.note-statistic{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    >.note-title{
+        justify-content: space-around;
+        >div{
+            width: 300px;
+        }
+    }
+}
+.note-statistic-list{
+    display: flex;
+    flex-direction: column;
+    background-color: $grey;
+    border-radius: 20px;
+}
+.statistic-category{
+    display: flex;
+    background-color: $yellow;
+    font-size: $fontSize;
+    color: darken($grey,25%);
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    >div{
+        width: 300px;
+        align-items: center;
+        text-align: center;
+    }
+}
+.category-title{
+    display: flex;
+    position: relative;
+    >p{
+        padding-left: 50px;
+        font-size: $fontSize +2px;
+    }
+}
+.task{
+    background-image: url("./images/mycollection/002-shopping-basket.png");
+}
+.thought{
+    background-image: url("./images/mycollection/003-power.png");
+}
+.idea{
+    background-image: url("./images/mycollection/001-light-bulb.png");
+}
+.quotes{
+    background-image: url("./images/mycollection/004-quote.png");
+}
+#createNote{
+    align-self: end;
+    display: block;
+    width: $mainSize*1,5 + px;
+    height: 50px;
+    border: 1px solid lighten($yellow, 30%);
+    border-radius: 10px;
+    text-align: center;
+    background-color: $grey;
+    color: $yellow;
+    font-size: $fontSize + 5px;
+    margin-top: 20px;
+}
+.modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: darken($grey, 90%), $alpha: 0.7);
+
+}
+#form{
+    position: fixed;
+    left: 35%;
+    top: 20%;
+    width: $mainSize*5 +px;
+    display: flex;
+    flex-direction: column;
+    background: $yellow;
+    color: darken($grey, 15%);
+    border-radius: 8px;
+    padding: 24px;
+    >h2{
+        font-size: $fontSize + 10px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+    >div{
+        display: flex;
+        justify-content: space-between;
+        font-size: $fontSize + 2px;
+        line-height: $fontSize + 8px;
+        margin-bottom: 10px;
+        >label{
+            width: 180px;
+            text-align: right;
+        
+        }
+        >input, select{
+            width: 200px;
+            height: 25px;
+            outline: none;
+            background: $grey;
+            border: 1px solid darken($yellow, 40%);
+            border-radius: 4px;
+            appearance: none;
+            color: darken($yellow, 10%);
+        }
+        >input::placeholder{
+            color: darken($yellow, 10%);
+        }
+        >textarea{
+            background-color: transparent;
+            &::placeholder{
+                color: darken($grey, 15%);
+            }
+        }
+    }
+
+}
+#form-submit{
+    min-width: 100px;
+    align-self: center;
+    color: $yellow;
+    height: 40px;
+    border: none;
+    margin:  12px 0;
+    border-radius: 4px;
+    background-color: $grey;
+}
+#form-close{
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    padding: 0;
+}
